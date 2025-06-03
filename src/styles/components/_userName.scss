@@ -1,0 +1,67 @@
+@use 'variables' as v;
+
+
+.todo-app {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+.username {
+    width: 100%;
+    padding: 8px 25px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: .1em;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        margin: 11px auto;
+    }
+
+    input {
+        padding: 5px 3px;
+        text-align: center;
+        margin-bottom: 15px;
+        border: 1.5px solid v.$drak;
+        border-radius: 5px;
+        font-weight: 650;
+        font-size: 1rem;
+
+        &:hover,
+        &:focus {
+            margin-bottom: 16px;
+            border: 2px solid v.$btn-save-color-hover;
+            background: v.$gray-white;
+        }
+    }
+
+    .username-btn {
+        @extend input;
+        border: none;
+        cursor: pointer;
+        padding: 8px 3px;
+        font-size: 0.899rem;
+        background: v.$btn-save-color;
+        color: v.$white;
+        transition: .500s ease-in;
+
+        &:hover,
+        &:focus {
+            scale: 1.001;
+            background: v.$btn-save-color-hover;
+        }
+    }
+}
