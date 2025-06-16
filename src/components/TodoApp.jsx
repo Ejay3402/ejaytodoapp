@@ -8,6 +8,7 @@ import TaskInput from './TaskInput';
 import TaskList from './TaskList';
 import { getDateLabel } from './getDateLabel';
 import EditTask from './EditTask';
+import Footer from './footer';
 
 const TodoApp = () => {
   // Retrieve tasks from localStorage or default to an empty array
@@ -115,14 +116,14 @@ const TodoApp = () => {
       <TaskInput input={input} setInput={setInput} addTask={addTask} />
 
       {/* edit task */}
-      {editId && (
-        <EditTask editText={editText} setEditText={setEditText} saveEdit={saveEdit} cancelEdit={() => setEditId(null)}/>
-      )} 
+      {editId && ( 
+        <EditTask editText={editText} setEditText={setEditText} saveEdit={saveEdit} cancelEdit={() => setEditId(null)}/> )} 
 
       {/* Task list*/}
       <TaskList groupedTasks={groupedTasks} deleteTask={deleteTask}  markedCompleted={markedCompleted}  startEditingTask={startEditingTask} />
       
     </div>
+
   );
 };
 

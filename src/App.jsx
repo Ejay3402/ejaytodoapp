@@ -3,6 +3,7 @@ import './styles/index.scss';
 import TodoApp from "./components/TodoApp";
 import JustLogo from './components/JustLogo';
 import { useEffect, useState } from 'react';
+import Footer from './components/footer';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
     return (
       <>
         {page}
+      <Footer />
       </>
     )
 
